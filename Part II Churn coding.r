@@ -28,7 +28,7 @@ confusion.matrix
 
 confusionMatrix(confusion.matrix, positive='STAY')
 
-# determine the ¡°Big Tree¡± error rates (FPR and FNR) using the test data set
+# determine the Â¡Â°Big TreeÂ¡Â± error rates (FPR and FNR) using the test data set
 churn.pred1 = predict(fit, churn.test, type="class")
 churn.actual1 = churn.test$leave
 confusion.matrix1 = table(churn.pred1, churn.actual1)
@@ -46,7 +46,7 @@ fit$cptable[which.min(fit$cptable[,"xerror"]),"CP"]
 
 # It appears that lowest error occurs at CP = 0.002298851
 
-# Use the test data set to find the ¡°Pruned Tree¡± error rates
+# Use the test data set to find the Â¡Â°Pruned TreeÂ¡Â± error rates
 # POST PRUNING
 fit.post = prune.rpart(fit, cp=0.002298851)
 nrow(fit.post$frame) # 19 nodes
@@ -105,7 +105,7 @@ cm
 # Or using another method
 # FPR(a) = 3147/(3147 + 180) = 0.9458972
 # FNR(b) = 41/(41 + 3292) = 0.01230123
-# Expected	Profit = 541000*1000 ¨C 510000*100 a ¨C 490000*400 b = 490,348,202
+# Expected	Profit = 541000*1000 Â¨C 510000*100 a Â¨C 490000*400 b = 490,348,202
 
 # Question 5 shows in the Calculation Document
 
